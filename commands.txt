@@ -1,0 +1,21 @@
+python -m venv venv
+venv\Scripts\activate
+
+pip install django djangorestframework django-cors-headers
+
+django-admin startproject core backend
+cd backend
+python manage.py startapp shipping
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+http://127.0.0.1:8000/api/points/
+http://127.0.0.1:8000/api/calculate-shipping/
+
+npm create vite@latest frontend -- --template react
+cd frontend 
+npm install
+
+python manage.py runserver
+npm run dev
